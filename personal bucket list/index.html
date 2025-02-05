@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Bucket List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Personal Bucket List</h1>
+    </header>
+    
+    <section class="bucket-list">
+        <ul>
+            <li><span class="icon">&#9733;</span> Rome tour</li>
+            <li><span class="icon">&#x2713;</span> play guitar</li>
+            <li><span class="icon">&#9733;</span> race with bike</li>
+            <li><span class="icon">&#85564;</span> jump from mountain</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>created by amit anand</p>
+    </footer>
+
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+    <script>
+        // Show the "Back to Top" button when scrolling
+        window.onscroll = function() {
+            var btn = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        };
+
+        // Scroll back to the top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
